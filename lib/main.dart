@@ -46,9 +46,9 @@ class MyApp extends StatelessWidget {
         home: const MainScreen(),
         theme: ThemeData(
           textTheme: Theme.of(context).textTheme.apply(
-                bodyColor: const Color.fromRGBO(3, 78, 162, 1),
-                displayColor: const Color(0x00034ea2),
-              ),
+            bodyColor: const Color.fromRGBO(3, 78, 162, 1),
+            displayColor: const Color(0x00034ea2),
+          ),
         ));
   }
 }
@@ -81,95 +81,95 @@ class MainScreen extends StatelessWidget {
 
         shape: const RoundedRectangleBorder(
             borderRadius:
-                BorderRadiusDirectional.vertical(bottom: Radius.circular(15))),
+            BorderRadiusDirectional.vertical(bottom: Radius.circular(15))),
       ),
       body: Center(
           child: Column(children: [
-        const SizedBox(
-          height: 20,
-        ),
-        InkWell(
-          child: Container(
-            // 기준제목 container
-            width: 370,
-            height: 88,
-            decoration: BoxDecoration(
-              color: const Color(0xffffffff),
-              borderRadius: BorderRadius.circular(20),
-              boxShadow: const [
-                BoxShadow(
-                  color: Colors.grey,
-                  offset: Offset(0.0, 4.0), //(x,y)
-                  blurRadius: 1.0,
-                ),
-              ],
+            const SizedBox(
+              height: 20,
             ),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                SizedBox(
-                  height: 6,
-                ),
-                Row(
-                  children: const [
-                    SizedBox(
-                      // 기준 제목 왼쪽 여백 조정
-                      width: 30,
-                    ),
-                    Text(
-                      '1학생회관',
-                      textAlign: TextAlign.left,
-                      style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.w900,
-                          letterSpacing: 2.0),
+            InkWell(
+              child: Container(
+                // 기준제목 container
+                width: 370,
+                height: 88,
+                decoration: BoxDecoration(
+                  color: const Color(0xffffffff),
+                  borderRadius: BorderRadius.circular(20),
+                  boxShadow: const [
+                    BoxShadow(
+                      color: Colors.grey,
+                      offset: Offset(0.0, 4.0), //(x,y)
+                      blurRadius: 1.0,
                     ),
                   ],
                 ),
-                Row(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    const SizedBox(
-                      // 기준 제목 왼쪽 여백 조정
-                      width: 30,
+                    SizedBox(
+                      height: 6,
+                    ),
+                    Row(
+                      children: const [
+                        SizedBox(
+                          // 기준 제목 왼쪽 여백 조정
+                          width: 30,
+                        ),
+                        Text(
+                          '1학생회관',
+                          textAlign: TextAlign.left,
+                          style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.w900,
+                              letterSpacing: 2.0),
+                        ),
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        const SizedBox(
+                          // 기준 제목 왼쪽 여백 조정
+                          width: 30,
+                        ),
+                        SizedBox(
+                          child: Image.asset('assets/images/lunchSticker.png'),
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        SizedBox(
+                          child: Image.asset('assets/images/dinnerSticker.png'),
+                        ),
+                      ],
+                    ),
+                    Row(
+                      children: const [
+                        SizedBox(
+                          // 기준 제목 왼쪽 여백 조정
+                          width: 30,
+                        ),
+                        Text(
+                          '예상 대기 인원: 15명',
+                          textAlign: TextAlign.left,
+                          style: TextStyle(
+                              fontSize: 14,
+                              fontWeight: FontWeight.normal,
+                              letterSpacing: 2.0),
+                        ),
+                      ],
                     ),
                     SizedBox(
-                      child: Image.asset('assets/images/lunchSticker.png'),
-                    ),
-                    const SizedBox(
-                      width: 10,
-                    ),
-                    SizedBox(
-                      child: Image.asset('assets/images/dinnerSticker.png'),
+                      height: 10,
                     ),
                   ],
                 ),
-                Row(
-                  children: const [
-                    SizedBox(
-                      // 기준 제목 왼쪽 여백 조정
-                      width: 30,
-                    ),
-                    Text(
-                      '예상 대기 인원: 15명',
-                      textAlign: TextAlign.left,
-                      style: TextStyle(
-                          fontSize: 14,
-                          fontWeight: FontWeight.normal,
-                          letterSpacing: 2.0),
-                    ),
-                  ],
-                ),
-                SizedBox(
-                  height: 10,
-                ),
-              ],
+              ),
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => const StudentHall1()));
+              },
             ),
-          ),
-          onTap: () {
-            Navigator.push(context,
-                MaterialPageRoute(builder: (context) => const StudentHall1()));
-          },
-        ),
             const SizedBox(
               height: 10,
             ),
@@ -218,7 +218,7 @@ class MainScreen extends StatelessWidget {
                           width: 30,
                         ),
                         SizedBox(
-                          child: Image.asset('assets/images/morningSticker.png'),
+                          child: Image.asset('assets/images/MorningSticker.png'),
                         ),
                         const SizedBox(
                           width: 10,
@@ -498,7 +498,7 @@ class MainScreen extends StatelessWidget {
                     MaterialPageRoute(builder: (context) => const CollegeOfLifeSciences()));
               },
             ),
-      ])),
+          ])),
     );
     throw UnimplementedError();
   }
