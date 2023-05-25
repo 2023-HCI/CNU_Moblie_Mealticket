@@ -192,7 +192,7 @@ class MainScreen extends StatelessWidget {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    SizedBox(
+                    const SizedBox(
                       height: 6,
                     ),
                     Row(
@@ -218,7 +218,7 @@ class MainScreen extends StatelessWidget {
                           width: 30,
                         ),
                         SizedBox(
-                          child: Image.asset('assets/images/MorningSticker.png'),
+                          child: Image.asset('assets/images/morningSticker.png'),
                         ),
                         const SizedBox(
                           width: 10,
