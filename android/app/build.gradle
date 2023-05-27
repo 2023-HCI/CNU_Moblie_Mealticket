@@ -52,6 +52,7 @@ android {
             signingConfig signingConfigs.debug
         }
     }
+    namespace 'com.example.cnu_mobile_meal_ticket'
 }
 
 flutter {
