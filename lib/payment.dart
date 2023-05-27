@@ -56,7 +56,7 @@ class PaymentState extends State<Payment> {
   final List<PaymentButtonInfo> buttons = [
     // 네이버페이
     const PaymentButtonInfo(
-      image: 'images/naverpay.png',
+      image: 'assets/images/naverpay.png',
       text: '네이버페이',
       color: Color(0xFF2DB400),
       textColor: Color(0xFFFFFFFF),
@@ -64,7 +64,7 @@ class PaymentState extends State<Payment> {
 
     // 카카오페이
     const PaymentButtonInfo(
-      image: 'images/kakaopay.png',
+      image: 'assets/images/kakaopay.png',
       text: '카카오페이',
       color: Color(0xFFFEE500),
       textColor: Color(0xFFFFFFFF),
@@ -72,7 +72,7 @@ class PaymentState extends State<Payment> {
 
     // 페이코
     const PaymentButtonInfo(
-      image: 'images/payco.png',
+      image: 'assets/images/payco.png',
       text: '페이코',
       color: Color(0xFFFA2828),
       textColor: Color(0xFFFFFFFF),
@@ -80,7 +80,7 @@ class PaymentState extends State<Payment> {
 
     // 토스페이
     const PaymentButtonInfo(
-      image: 'images/toss.png',
+      image: 'assets/images/toss.png',
       text: '토스페이',
       color: Color(0xFF0064FF),
       textColor: Color(0xFFFFFFFF),
@@ -88,7 +88,7 @@ class PaymentState extends State<Payment> {
 
     // 애플페이
     const PaymentButtonInfo(
-      image: 'images/apple.png',
+      image: 'assets/images/apple.png',
       text: '애플페이',
       color: Color(0xFF999999),
       textColor: Color(0xFFFFFFFF),
@@ -96,7 +96,7 @@ class PaymentState extends State<Payment> {
 
     // 삼성페이
     const PaymentButtonInfo(
-      image: 'images/samsungpay.png',
+      image: 'assets/images/samsungpay.png',
       text: '삼성페이',
       color: Color(0xFF0C4DA2),
       textColor: Color(0xFFFFFFFF),
@@ -104,7 +104,7 @@ class PaymentState extends State<Payment> {
 
     // 신용카드
     const PaymentButtonInfo(
-      image: 'images/cardpay.png',
+      image: 'assets/images/cardpay.png',
       text: '신용카드',
       color: Color(0xFFB3A177),
       textColor: Color(0xFFFFFFFF),
@@ -112,7 +112,7 @@ class PaymentState extends State<Payment> {
 
     // 휴대전화
     const PaymentButtonInfo(
-      image: 'images/phonepay.png',
+      image: 'assets/images/phonepay.png',
       text: '휴대전화',
       color: Color(0xFFB3A177),
       textColor: Color(0xFFFFFFFF),
@@ -143,7 +143,7 @@ class PaymentState extends State<Payment> {
           actions: [
             IconButton(
               icon: Image.asset(
-                "images/chacha.png",
+                "assets/images/chacha.png",
               ),
               onPressed: () {},
             )
@@ -154,271 +154,275 @@ class PaymentState extends State<Payment> {
         ),
 
         // Code Start Here!!
-        body: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            // 주문자정보 박스
-            SizedBox(
-              width: double.infinity,
-              child: Padding(
-                padding: const EdgeInsets.all(10),
-                child: Container(
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(15),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.black.withOpacity(0.3),
-                        blurRadius: 6,
-                        offset: const Offset(0, 3),
-                      ),
-                    ],
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.all(10),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        const Center(
-                          child: Text(
-                            "주문자 정보",
-                            style: TextStyle(
-                              fontSize: 16,
-                              fontWeight: FontWeight.bold,
-                              color: Color(0xFF034EA2),
-                            ),
-                          ),
-                        ),
-                        const SizedBox(height: 10),
-                        Container(
-                          height: 1,
-                          color: Colors.grey,
-                          margin: const EdgeInsets.symmetric(horizontal: 20),
-                        ),
-                        const SizedBox(height: 10),
-                        Center(
-                          child: Text(
-                            '${widget.studentNumber} - ${widget.studentName}',
-                            style: const TextStyle(
-                              fontSize: 15,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
+        body: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              // 주문자정보 박스
+              SizedBox(
+                width: double.infinity,
+                child: Padding(
+                  padding: const EdgeInsets.all(10),
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(15),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black.withOpacity(0.3),
+                          blurRadius: 6,
+                          offset: const Offset(0, 3),
                         ),
                       ],
                     ),
-                  ),
-                ),
-              ),
-            ),
-
-            // 결제방법 박스
-            SizedBox(
-              width: double.infinity,
-              child: Padding(
-                padding: const EdgeInsets.all(10),
-                child: Container(
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(15),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.black.withOpacity(0.3),
-                        blurRadius: 6,
-                        offset: const Offset(0, 3),
-                      ),
-                    ],
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.all(10),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        const Center(
-                          child: Text(
-                            "결제방법",
-                            style: TextStyle(
-                              fontSize: 16,
-                              fontWeight: FontWeight.bold,
-                              color: Color(0xFF034EA2),
-                            ),
-                          ),
-                        ),
-                        const SizedBox(height: 10),
-                        for (int i = 0; i < buttons.length; i += 2)
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Expanded(
-                                child: Center(
-                                  child: CustomPaymentButton(
-                                    image: buttons[i].image,
-                                    text: buttons[i].text,
-                                    color: buttons[i].color,
-                                    textColor: buttons[i].textColor,
-                                    onPressed: onClickButton,
-                                  ),
-                                ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(10),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const Center(
+                            child: Text(
+                              "주문자 정보",
+                              style: TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold,
+                                color: Color(0xFF034EA2),
                               ),
-                              if (i + 1 < buttons.length) const SizedBox(width: 10),
-                              if (i + 1 < buttons.length)
-                                Expanded(
-                                  child: Center(
-                                    child: CustomPaymentButton(
-                                      image: buttons[i + 1].image,
-                                      text: buttons[i + 1].text,
-                                      color: buttons[i + 1].color,
-                                      textColor: buttons[i + 1].textColor,
-                                      onPressed: onClickButton,
-                                    ),
-                                  ),
-                                ),
-                              const SizedBox(height: 50),
-                            ],
+                            ),
                           ),
-                        const SizedBox(height: 10),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-            ),
-
-            // 주문내역 박스
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                SizedBox(
-                  height: 300,
-                  width: double.infinity,
-                  child: Padding(
-                    padding: const EdgeInsets.all(10),
-                    child: Container(
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(15),
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.black.withOpacity(0.3),
-                            blurRadius: 6,
-                            offset: const Offset(0, 3),
+                          const SizedBox(height: 10),
+                          Container(
+                            height: 1,
+                            color: Colors.grey,
+                            margin: const EdgeInsets.symmetric(horizontal: 20),
+                          ),
+                          const SizedBox(height: 10),
+                          Center(
+                            child: Text(
+                              '${widget.studentNumber} - ${widget.studentName}',
+                              style: const TextStyle(
+                                fontSize: 15,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
                           ),
                         ],
                       ),
-                      child: Padding(
-                        padding: const EdgeInsets.all(10),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Expanded(
-                              child: ListView.builder(
-                                itemCount: orderList.length,
-                                itemBuilder: (context, index) {
-                                  return Column(
-                                    children: [
-                                      Row(
-                                        children: [
-                                          Expanded(
-                                            child: Padding(
-                                              padding: const EdgeInsets.symmetric(horizontal: 8),
-                                              child: Align(
-                                                alignment: Alignment.centerLeft,
-                                                child: Text(
-                                                  orderList[index].menu,
-                                                  style: const TextStyle(
-                                                    fontSize: 15,
-                                                    fontWeight: FontWeight.bold,
-                                                  ),
-                                                  textAlign: TextAlign.left,
-                                                ),
-                                              ),
-                                            ),
-                                          ),
-                                          Expanded(
-                                            child: Padding(
-                                              padding: const EdgeInsets.symmetric(horizontal: 8),
-                                              child: Align(
-                                                alignment: Alignment.center,
-                                                child: Text(
-                                                  'x ${orderList[index].quantity}',
-                                                  style: const TextStyle(
-                                                    fontSize: 15,
-                                                    fontWeight: FontWeight.bold,
-                                                  ),
-                                                  textAlign: TextAlign.center,
-                                                ),
-                                              ),
-                                            ),
-                                          ),
-                                          Expanded(
-                                            child: Padding(
-                                              padding: const EdgeInsets.symmetric(horizontal: 8),
-                                              child: Align(
-                                                alignment: Alignment.centerRight,
-                                                child: Text(
-                                                  '가격: ${NumberFormat('#,###').format(orderList[index].price)}',
-                                                  style: const TextStyle(
-                                                    fontSize: 15,
-                                                    fontWeight: FontWeight.bold,
-                                                  ),
-                                                  textAlign: TextAlign.right,
-                                                ),
-                                              ),
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                      if (index != orderList.length)
-                                        const Divider(
-                                          color: Colors.black,
-                                        ),
-                                    ],
-                                  );
-                                },
+                    ),
+                  ),
+                ),
+              ),
+
+              // 결제방법 박스
+              SizedBox(
+                width: double.infinity,
+                child: Padding(
+                  padding: const EdgeInsets.all(10),
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(15),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black.withOpacity(0.3),
+                          blurRadius: 6,
+                          offset: const Offset(0, 3),
+                        ),
+                      ],
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(10),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const Center(
+                            child: Text(
+                              "결제방법",
+                              style: TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold,
+                                color: Color(0xFF034EA2),
                               ),
                             ),
-                            Align(
-                              alignment: Alignment.centerRight,
-                              child: Text(
-                                '결제금액: ${NumberFormat('#,###').format(orderList.fold<int>(0, (sum, item) => sum + item.price))}',
-                                style: const TextStyle(
-                                  fontSize: 25,
-                                  fontWeight: FontWeight.bold,
+                          ),
+                          const SizedBox(height: 10),
+                          for (int i = 0; i < buttons.length; i += 2)
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Expanded(
+                                  child: Center(
+                                    child: CustomPaymentButton(
+                                      image: buttons[i].image,
+                                      text: buttons[i].text,
+                                      color: buttons[i].color,
+                                      textColor: buttons[i].textColor,
+                                      onPressed: onClickButton,
+
+                                    ),
+                                  ),
                                 ),
-                              ),
+                                if (i + 1 < buttons.length) const SizedBox(width: 10),
+                                if (i + 1 < buttons.length)
+                                  Expanded(
+                                    child: Center(
+                                      child: CustomPaymentButton(
+                                        image: buttons[i + 1].image,
+                                        text: buttons[i + 1].text,
+                                        color: buttons[i + 1].color,
+                                        textColor: buttons[i + 1].textColor,
+                                        onPressed: onClickButton,
+                                      ),
+                                    ),
+                                  ),
+                                const SizedBox(height: 50),
+                              ],
+                            ),
+                          const SizedBox(height: 10),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+
+              // 주문내역 박스
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  SizedBox(
+                    height: 300,
+                    width: double.infinity,
+                    child: Padding(
+                      padding: const EdgeInsets.all(10),
+                      child: Container(
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(15),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black.withOpacity(0.3),
+                              blurRadius: 6,
+                              offset: const Offset(0, 3),
                             ),
                           ],
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.all(10),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Expanded(
+                                child: ListView.builder(
+                                  itemCount: orderList.length,
+                                  itemBuilder: (context, index) {
+                                    return Column(
+                                      children: [
+                                        Row(
+                                          children: [
+                                            Expanded(
+                                              child: Padding(
+                                                padding: const EdgeInsets.symmetric(horizontal: 8),
+                                                child: Align(
+                                                  alignment: Alignment.centerLeft,
+                                                  child: Text(
+                                                    orderList[index].menu,
+                                                    style: const TextStyle(
+                                                      fontSize: 15,
+                                                      fontWeight: FontWeight.bold,
+                                                    ),
+                                                    textAlign: TextAlign.left,
+                                                  ),
+                                                ),
+                                              ),
+                                            ),
+                                            Expanded(
+                                              child: Padding(
+                                                padding: const EdgeInsets.symmetric(horizontal: 8),
+                                                child: Align(
+                                                  alignment: Alignment.center,
+                                                  child: Text(
+                                                    'x ${orderList[index].quantity}',
+                                                    style: const TextStyle(
+                                                      fontSize: 15,
+                                                      fontWeight: FontWeight.bold,
+                                                    ),
+                                                    textAlign: TextAlign.center,
+                                                  ),
+                                                ),
+                                              ),
+                                            ),
+                                            Expanded(
+                                              child: Padding(
+                                                padding: const EdgeInsets.symmetric(horizontal: 8),
+                                                child: Align(
+                                                  alignment: Alignment.centerRight,
+                                                  child: Text(
+                                                    '가격: ${NumberFormat('#,###').format(orderList[index].price)}',
+                                                    style: const TextStyle(
+                                                      fontSize: 15,
+                                                      fontWeight: FontWeight.bold,
+                                                    ),
+                                                    textAlign: TextAlign.right,
+                                                  ),
+                                                ),
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                        if (index != orderList.length)
+                                          const Divider(
+                                            color: Colors.black,
+                                          ),
+                                      ],
+                                    );
+                                  },
+                                ),
+                              ),
+                              Align(
+                                alignment: Alignment.centerRight,
+                                child: Text(
+                                  '결제금액: ${NumberFormat('#,###').format(orderList.fold<int>(0, (sum, item) => sum + item.price))}',
+                                  style: const TextStyle(
+                                    fontSize: 25,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
                         ),
                       ),
                     ),
                   ),
-                ),
-                const SizedBox(height: 10),
-
-                // 결제하기 버튼
-                Align(
-                  alignment: Alignment.center, // 가운데 정렬
-                  child: ElevatedButton(
-                    onPressed: () {
-                      // 결제하기 버튼 클릭 함수
-                    },
-                    style: ElevatedButton.styleFrom(
-                      fixedSize: const Size(350, 70), // 가로 길이와 세로 길이를 350과 70으로 고정
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(30), // 모서리를 30으로 라운딩 처리
+                  const SizedBox(height: 10),
+                  // 결제하기 버튼
+                  Align(
+                    alignment: Alignment.center, // 가운데 정렬
+                    child: ElevatedButton(
+                      onPressed: () {
+                        // 결제하기 버튼 클릭 함수
+                      },
+                      style: ElevatedButton.styleFrom(
+                        fixedSize: const Size(350, 70), // 가로 길이와 세로 길이를 350과 70으로 고정
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(30), // 모서리를 30으로 라운딩 처리
+                        ),
+                        primary: const Color(0xFF034EA2), // 버튼의 배경색을 034EA2로 설정
                       ),
-                      primary: const Color(0xFF034EA2), // 버튼의 배경색을 034EA2로 설정
-                    ),
-                    child: const Text(
-                      '결제하기',
-                      style: TextStyle(fontSize: 25),
+                      child: const Text(
+                        '결제하기',
+                        style: TextStyle(fontSize: 25),
+                      ),
                     ),
                   ),
-                ),
-              ],
-            ),
-          ],
+                  const SizedBox(height: 20),
+                ],
+              ),
+            ],
+          ),
         ),
+
       ),
     );
   }

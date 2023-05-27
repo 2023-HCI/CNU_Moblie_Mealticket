@@ -32,7 +32,7 @@ final statefulScreenList = <StatefulWidget>[
   const KoreanFood(),
   const ShoppingBasket(),
   const OrderConfirm(),
-  const Payment(),
+  //const Payment(),
 ];
 
 class MyApp extends StatelessWidget {
@@ -218,7 +218,7 @@ class MainScreen extends StatelessWidget {
                           width: 30,
                         ),
                         SizedBox(
-                          child: Image.asset('assets/images/MorningSticker.png'),
+                          child: Image.asset('assets/images/morningSticker.png'),
                         ),
                         const SizedBox(
                           width: 10,
