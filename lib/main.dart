@@ -218,13 +218,13 @@ class MainScreen extends StatelessWidget {
                           width: 30,
                         ),
                         SizedBox(
-                          child: Image.asset('assets/images/morningSticker.png'),
+                          child: Image.asset('assets/images/MorningSticker.png'),
                         ),
                         const SizedBox(
                           width: 10,
                         ),
                         SizedBox(
-                          child: Image.asset('assets/images/dinnerSticker.png'),
+                          child: Image.asset('assets/images/lunchSticker.png'),
                         ),
                       ],
                     ),
