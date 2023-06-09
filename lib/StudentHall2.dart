@@ -8,10 +8,13 @@ class StudentHall2 extends StatefulWidget {
   StudentHall2State createState() => StudentHall2State();
 
   const StudentHall2({Key? key}) : super(key: key);
+
+
 }
 
 class StudentHall2State extends State<StudentHall2> {
   int studentCount = 0, staffCount = 0, morningCount = 0;
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -78,8 +81,8 @@ class StudentHall2State extends State<StudentHall2> {
                         const SizedBox(
                           height: 10,
                         ),
-                        const Row(
-                          children: [
+                         Row(
+                          children: const [
                             SizedBox(
                               // 기준 제목 왼쪽 여백 조정
                               width: 15,
@@ -98,8 +101,8 @@ class StudentHall2State extends State<StudentHall2> {
                         const SizedBox(
                           height: 20,
                         ),
-                        const Row(
-                          children: [
+                         Row(
+                          children: const [
                             SizedBox(
                               // 기준 제목 왼쪽 여백 조정
                               width: 15,
@@ -115,8 +118,8 @@ class StudentHall2State extends State<StudentHall2> {
                             )
                           ],
                         ),
-                        const Row(
-                          children: [
+                         Row(
+                          children: const [
                             SizedBox(
                               // 기준 제목 왼쪽 여백 조정
                               width: 15,
@@ -201,7 +204,7 @@ class StudentHall2State extends State<StudentHall2> {
                                 ),
 
                                 InkWell(
-                                  onTap: () => FlutterDialog(),
+                                  onTap: () => flutterDialog(),
                                   child: SizedBox(
                                     width: 105,
                                     height: 30,
@@ -292,7 +295,7 @@ class StudentHall2State extends State<StudentHall2> {
                                 ),
 
                                 InkWell(
-                                  onTap: () => FlutterDialog(),
+                                  onTap: () => flutterDialog(),
                                   child: SizedBox(
                                     width: 105,
                                     height: 30,
@@ -387,7 +390,7 @@ class StudentHall2State extends State<StudentHall2> {
                                 ),
 
                                 InkWell(
-                                  onTap: () => FlutterDialog(),
+                                  onTap: () => flutterDialog(),
                                   child: SizedBox(
                                     width: 105,
                                     height: 30,
@@ -480,7 +483,7 @@ class StudentHall2State extends State<StudentHall2> {
     }
   }
 
-  void FlutterDialog() {
+  void flutterDialog() {
     showDialog(
         context: context,
         //barrierDismissible - Dialog를 제외한 다른 화면 터치 x

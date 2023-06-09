@@ -1,4 +1,11 @@
+import 'package:cnu_mobile_meal_ticket/ramen.dart';
+import 'package:cnu_mobile_meal_ticket/snack.dart';
+import 'package:cnu_mobile_meal_ticket/westernFood.dart';
 import 'package:flutter/material.dart';
+
+import 'chineseFood.dart';
+import 'japaneseFood.dart';
+import 'koreanFood.dart';
 
 class StudentHall1 extends StatefulWidget {
   @override
@@ -137,7 +144,7 @@ class StudentHall1State extends State<StudentHall1> {
               Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (context) => const StudentHall1()));
+                      builder: (context) => const Ramen()));
             },
           ),
               const SizedBox(
@@ -227,7 +234,7 @@ class StudentHall1State extends State<StudentHall1> {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const StudentHall1()));
+                          builder: (context) => const WesternFood()));
                 },
               ),
               const SizedBox(
@@ -317,7 +324,7 @@ class StudentHall1State extends State<StudentHall1> {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const StudentHall1()));
+                          builder: (context) => const Snack()));
                 },
               ),
               const SizedBox(
@@ -407,7 +414,7 @@ class StudentHall1State extends State<StudentHall1> {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const StudentHall1()));
+                          builder: (context) => const JapaneseFood()));
                 },
               ),
               const SizedBox(
@@ -432,7 +439,7 @@ class StudentHall1State extends State<StudentHall1> {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      SizedBox(
+                      const SizedBox(
                         height: 6,
                       ),
                       Row(
@@ -497,7 +504,7 @@ class StudentHall1State extends State<StudentHall1> {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const StudentHall1()));
+                          builder: (context) => const ChineseFood()));
                 },
               ),
               const SizedBox(
@@ -587,7 +594,7 @@ class StudentHall1State extends State<StudentHall1> {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const StudentHall1()));
+                          builder: (context) => const KoreanFood()));
                 },
               ),
                   ])),

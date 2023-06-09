@@ -1,24 +1,7 @@
-import 'dart:core';
 import 'package:cnu_mobile_meal_ticket/payment.dart';
-import 'StudentHall2.dart';
+import 'package:cnu_mobile_meal_ticket/shoppingBasket.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
-void main() {
-  runApp(const MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Ramen(),
-    );
-  }
-}
 
 class Ramen extends StatefulWidget {
   @override
@@ -28,7 +11,7 @@ class Ramen extends StatefulWidget {
 }
 
 class RamenState extends State<Ramen> {
-  int lunchCounter = 0;
+  List<int> counters = [0, 0, 0, 0, 0];
   List<String> ramenName = ['일반라면', '떡라면', '부대라면', '김밥', '공기밥'];
   List<int> ramenPrice = [2500, 3000, 4000, 2500, 500];
 
@@ -91,7 +74,12 @@ class RamenState extends State<Ramen> {
               icon: Image.asset(
                 "assets/images/chacha.png",
               ),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const ShoppingBasket()));
+              },
             )
           ],
           shape: const RoundedRectangleBorder(
@@ -122,6 +110,7 @@ class RamenState extends State<Ramen> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
+
                     const SizedBox(
                       height: 10,
                     ),
@@ -221,7 +210,9 @@ class RamenState extends State<Ramen> {
                                       CupertinoButton(
                                           onPressed: () {
                                             setState(() {
-                                              lunchCounter--;
+                                              if (counters[i] > 0) {
+                                                counters[i]--;
+                                              }
                                             });
                                           },
                                           child: SizedBox(
@@ -230,11 +221,11 @@ class RamenState extends State<Ramen> {
                                             child: Image.asset(
                                                 'assets/images/minus.png'),
                                           )),
-                                      Text('$lunchCounter'),
+                                      Text('${counters[i]}'),
                                       CupertinoButton(
                                           onPressed: () {
                                             setState(() {
-                                              lunchCounter++;
+                                              counters[i]++;
                                             });
                                           },
                                           child: SizedBox(
@@ -264,10 +255,13 @@ class RamenState extends State<Ramen> {
                                       child:
                                           Image.asset('assets/images/pay.png'),
                                     ),
-                                    // onTap: () {
-                                    //   Navigator.push(context,
-                                    //       MaterialPageRoute(builder: (context) => const Payment()));
-                                    // },
+                                    onTap: () {
+                                      Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                              builder: (context) =>
+                                                  const Payment()));
+                                    },
                                   )
                                 ],
                               )
@@ -284,6 +278,14 @@ class RamenState extends State<Ramen> {
                   ],
                 )),
           ])),
+        ),
+        floatingActionButton: FloatingActionButton(
+            onPressed: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => const ShoppingBasket()));
+            },
+            backgroundColor: const Color(0xff034EA2),
+            child: const Icon(Icons.shopping_cart)
         ),
       ),
     );

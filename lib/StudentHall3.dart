@@ -73,7 +73,7 @@ class StudentHall2State extends State<StudentHall3> {
                   const SizedBox(
                     height: 10,
                   ),
-                  const Row(
+                   Row(
                     children: [
                       SizedBox(
                         // 기준 제목 왼쪽 여백 조정
@@ -93,7 +93,7 @@ class StudentHall2State extends State<StudentHall3> {
                   const SizedBox(
                     height: 20,
                   ),
-                  const Row(
+                   Row(
                     children: [
                       SizedBox(
                         // 기준 제목 왼쪽 여백 조정
@@ -110,7 +110,7 @@ class StudentHall2State extends State<StudentHall3> {
                       )
                     ],
                   ),
-                  const Row(
+                   Row(
                     children: [
                       SizedBox(
                         // 기준 제목 왼쪽 여백 조정

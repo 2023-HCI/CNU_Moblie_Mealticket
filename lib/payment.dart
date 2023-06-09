@@ -1,45 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
-void main() {
-  const studentNumber = '7080';
-  const studentName = '차차';
-  runApp(const MyApp(studentNumber: studentNumber, studentName: studentName));
-}
 
-class MyApp extends StatelessWidget {
-  final String studentNumber;
-  final String studentName;
-
-  const MyApp({Key? key, required this.studentNumber, required this.studentName}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Payment(
-        studentNumber: studentNumber,
-        studentName: studentName,
-      ),
-    );
-  }
-}
+import 'orderConfirm.dart';
 
 class Payment extends StatefulWidget {
-  final String studentNumber;
-  final String studentName;
-
-  const Payment({Key? key, required this.studentNumber, required this.studentName}) : super(key: key);
-
   @override
   PaymentState createState() => PaymentState();
+  const Payment({Key? key}) : super(key: key);
 }
 
 class PaymentState extends State<Payment> {
-
+  final String studentNumber = '7080';
+  final String studentName = '차차';
   // 현재 장바구니에 담긴 메뉴 리스트
   List<OrderItem> orderList = [
-    OrderItem(menu: '라면 - 떡라면', quantity: 2, price: 5000),
+    OrderItem(menu: '라면 - 떡라면', quantity: 2, price: 2500),
     OrderItem(menu: '라면 - 김밥', quantity: 1, price: 2500),
     OrderItem(menu: '한식 - 김치찌개', quantity: 1, price: 5800),
     OrderItem(menu: '한식 - 제육덮밥', quantity: 1, price: 5500),
@@ -199,7 +175,7 @@ class PaymentState extends State<Payment> {
                           const SizedBox(height: 10),
                           Center(
                             child: Text(
-                              '${widget.studentNumber} - ${widget.studentName}',
+                              '$studentNumber - $studentName',
                               style: const TextStyle(
                                 fontSize: 15,
                                 fontWeight: FontWeight.bold,
@@ -314,7 +290,7 @@ class PaymentState extends State<Payment> {
                             children: [
                               Expanded(
                                 child: ListView.builder(
-                                  itemCount: orderList.length,
+                                  itemCount: orderList.length - 5,
                                   itemBuilder: (context, index) {
                                     return Column(
                                       children: [
@@ -379,11 +355,12 @@ class PaymentState extends State<Payment> {
                                   },
                                 ),
                               ),
-                              Align(
+                              const Align(
                                 alignment: Alignment.centerRight,
                                 child: Text(
-                                  '결제금액: ${NumberFormat('#,###').format(orderList.fold<int>(0, (sum, item) => sum + item.price))}',
-                                  style: const TextStyle(
+                                  '결제금액: 5,000',
+                                  //NumberFormat('#,###').format(orderList.fold<int>(0, (sum, item) => sum + item.price))
+                                  style: TextStyle(
                                     fontSize: 25,
                                     fontWeight: FontWeight.bold,
                                   ),
@@ -402,6 +379,8 @@ class PaymentState extends State<Payment> {
                     child: ElevatedButton(
                       onPressed: () {
                         // 결제하기 버튼 클릭 함수
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) =>  const OrderConfirm()));
                       },
                       style: ElevatedButton.styleFrom(
                         fixedSize: const Size(350, 70), // 가로 길이와 세로 길이를 350과 70으로 고정
