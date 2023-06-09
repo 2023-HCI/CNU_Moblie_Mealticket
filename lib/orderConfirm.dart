@@ -1,20 +1,6 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(const MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: OrderConfirm(),
-    );
-  }
-}
+import 'main.dart';
 
 class OrderConfirm extends StatefulWidget {
   @override
@@ -447,8 +433,36 @@ class OrderConfirmState extends State<OrderConfirm> {
                     )
                   ],
                 ),
+
               ),
             ),
+            SizedBox(height: 15),
+            InkWell(
+              child: Container(
+                child: Align(
+                  alignment: Alignment.center, // 가운데 정렬
+                  child: ElevatedButton(
+                    onPressed: () {
+                      // 결제하기 버튼 클릭 함수
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) =>  const MainScreen()));
+                    },
+                    style: ElevatedButton.styleFrom(
+                      fixedSize: const Size(350, 70), // 가로 길이와 세로 길이를 350과 70으로 고정
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(30), // 모서리를 30으로 라운딩 처리
+                      ),
+                      primary: const Color(0xFF034EA2), // 버튼의 배경색을 034EA2로 설정
+                    ),
+                    child: const Text(
+                      '확인완료',
+                      style: TextStyle(fontSize: 25),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+            const SizedBox(height: 15),
           ]),
         )
         )

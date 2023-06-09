@@ -1,20 +1,5 @@
+import 'package:cnu_mobile_meal_ticket/payment.dart';
 import 'package:flutter/material.dart';
-
-void main() {
-  runApp(const MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: ShoppingBasket(),
-    );
-  }
-}
 
 class ShoppingBasket extends StatefulWidget {
   @override
@@ -358,15 +343,15 @@ class ShoppingBasketState extends State<ShoppingBasket> {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         const SizedBox(height: 20),
-                        Text(
+                        const Text(
                           '총 금액',
                           style: TextStyle(
                             fontSize: 20,
-                            color: const Color(0xFF034EA2),
+                            color: Color(0xFF034EA2),
                           ),
                         ),
                         const SizedBox(height: 50),
-                        Text(
+                        const Text(
                           '5,000원',
                           style: TextStyle(
                             fontSize: 30,
@@ -383,19 +368,27 @@ class ShoppingBasketState extends State<ShoppingBasket> {
                         const SizedBox(height: 20),
                         Align(
                           alignment: Alignment.bottomCenter,
-                          child: Container(
-                            margin: const EdgeInsets.symmetric(horizontal: 15),
-                            height: 65,
-                            decoration: BoxDecoration(
-                              color: const Color(0xFF034EA2),
-                              borderRadius: BorderRadius.circular(100),
-                            ),
-                            child: Center(
-                              child: Text(
-                                '버튼',
-                                style: TextStyle(
-                                  fontSize: 30,
-                                  color: Colors.white,
+                          child: InkWell(
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => const Payment()));
+                            },
+                            child: Container(
+                              margin: const EdgeInsets.symmetric(horizontal: 15),
+                              height: 65,
+                              decoration: BoxDecoration(
+                                color: const Color(0xFF034EA2),
+                                borderRadius: BorderRadius.circular(100),
+                              ),
+                              child: const Center(
+                                child: Text(
+                                  '결제 페이지로 이동',
+                                  style: TextStyle(
+                                    fontSize: 30,
+                                    color: Colors.white,
+                                  ),
                                 ),
                               ),
                             ),
