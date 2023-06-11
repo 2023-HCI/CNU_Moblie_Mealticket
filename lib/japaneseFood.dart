@@ -151,7 +151,7 @@ class JapaneseFoodState extends State<JapaneseFood> {
                               width: 15,
                             ),
                             Text(
-                              '예상 대기 인원: 15명',
+                              '예상 대기 인원: 13명',
                               textAlign: TextAlign.left,
                               style: TextStyle(
                                   fontSize: 14,

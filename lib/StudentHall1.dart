@@ -125,7 +125,7 @@ class StudentHall1State extends State<StudentHall1> {
                         width: 30,
                       ),
                       Text(
-                        '예상 대기 인원: 15명',
+                        '예상 대기 인원: 6명',
                         textAlign: TextAlign.left,
                         style: TextStyle(
                             fontSize: 14,
@@ -215,7 +215,7 @@ class StudentHall1State extends State<StudentHall1> {
                             width: 30,
                           ),
                           Text(
-                            '예상 대기 인원: 15명',
+                            '예상 대기 인원: 9명',
                             textAlign: TextAlign.left,
                             style: TextStyle(
                                 fontSize: 14,
@@ -305,7 +305,7 @@ class StudentHall1State extends State<StudentHall1> {
                             width: 30,
                           ),
                           Text(
-                            '예상 대기 인원: 15명',
+                            '예상 대기 인원: 3명',
                             textAlign: TextAlign.left,
                             style: TextStyle(
                                 fontSize: 14,
@@ -395,7 +395,7 @@ class StudentHall1State extends State<StudentHall1> {
                             width: 30,
                           ),
                           Text(
-                            '예상 대기 인원: 15명',
+                            '예상 대기 인원: 13명',
                             textAlign: TextAlign.left,
                             style: TextStyle(
                                 fontSize: 14,
@@ -485,7 +485,7 @@ class StudentHall1State extends State<StudentHall1> {
                             width: 30,
                           ),
                           Text(
-                            '예상 대기 인원: 15명',
+                            '예상 대기 인원: 0명',
                             textAlign: TextAlign.left,
                             style: TextStyle(
                                 fontSize: 14,
@@ -575,7 +575,7 @@ class StudentHall1State extends State<StudentHall1> {
                             width: 30,
                           ),
                           Text(
-                            '예상 대기 인원: 15명',
+                            '예상 대기 인원: 3명',
                             textAlign: TextAlign.left,
                             style: TextStyle(
                                 fontSize: 14,

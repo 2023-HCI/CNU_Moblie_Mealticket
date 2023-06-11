@@ -150,7 +150,7 @@ class MainScreen extends StatelessWidget {
                           width: 30,
                         ),
                         Text(
-                          '예상 대기 인원: 15명',
+                          '예상 대기 인원: 34명',
                           textAlign: TextAlign.left,
                           style: TextStyle(
                               fontSize: 14,
@@ -235,7 +235,7 @@ class MainScreen extends StatelessWidget {
                           width: 30,
                         ),
                         Text(
-                          '예상 대기 인원: 15명',
+                          '예상 대기 인원: 70명',
                           textAlign: TextAlign.left,
                           style: TextStyle(
                               fontSize: 14,
@@ -320,7 +320,7 @@ class MainScreen extends StatelessWidget {
                           width: 30,
                         ),
                         Text(
-                          '예상 대기 인원: 15명',
+                          '예상 대기 인원: 42명',
                           textAlign: TextAlign.left,
                           style: TextStyle(
                               fontSize: 14,
@@ -399,7 +399,7 @@ class MainScreen extends StatelessWidget {
                           width: 30,
                         ),
                         Text(
-                          '예상 대기 인원: 15명',
+                          '예상 대기 인원: 21명',
                           textAlign: TextAlign.left,
                           style: TextStyle(
                               fontSize: 14,
@@ -478,7 +478,7 @@ class MainScreen extends StatelessWidget {
                           width: 30,
                         ),
                         Text(
-                          '예상 대기 인원: 15명',
+                          '예상 대기 인원: 10명',
                           textAlign: TextAlign.left,
                           style: TextStyle(
                               fontSize: 14,

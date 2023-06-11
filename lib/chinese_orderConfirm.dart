@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 
 import 'main.dart';
 
-class OrderConfirm extends StatefulWidget {
+class ChineseOrderConfirm extends StatefulWidget {
   @override
-  OrderConfirmState createState() => OrderConfirmState();
+  ChineseOrderConfirmState createState() => ChineseOrderConfirmState();
 
-  const OrderConfirm({Key? key}) : super(key: key);
+  const ChineseOrderConfirm({Key? key}) : super(key: key);
 }
 
-class OrderConfirmState extends State<OrderConfirm> {
+class ChineseOrderConfirmState extends State<ChineseOrderConfirm> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -122,7 +122,7 @@ class OrderConfirmState extends State<OrderConfirm> {
                               width: 30,
                             ),
                             Text(
-                              '1학 - 라면',
+                              '1학 - 중식',
                               textAlign: TextAlign.left,
                               style: TextStyle(
                                 fontSize: 15,
@@ -148,7 +148,7 @@ class OrderConfirmState extends State<OrderConfirm> {
                               width: 30,
                             ),
                             Text(
-                              '라면 - 떡라면',
+                              '중식 - 차돌온면',
                               textAlign: TextAlign.left,
                               style: TextStyle(
                                 fontSize: 15,
@@ -166,7 +166,7 @@ class OrderConfirmState extends State<OrderConfirm> {
                             ),
                             Spacer(),
                             Text(
-                              '2,500원',
+                              '6,500원',
                               textAlign: TextAlign.left,
                               style: TextStyle(
                                 fontSize: 15,
@@ -189,7 +189,7 @@ class OrderConfirmState extends State<OrderConfirm> {
                               width: 30,
                             ),
                             Text(
-                              '라면 - 김밥',
+                              '중식 - 매운차돌온면',
                               textAlign: TextAlign.left,
                               style: TextStyle(
                                 fontSize: 15,
@@ -197,7 +197,7 @@ class OrderConfirmState extends State<OrderConfirm> {
                               ),
                             ),
                             SizedBox(
-                              width: 86,
+                              width: 31,
                             ),
                             Text(
                               'x1',
@@ -209,7 +209,7 @@ class OrderConfirmState extends State<OrderConfirm> {
                             ),
                             Spacer(),
                             Text(
-                              '2,500원',
+                              '6,500원',
                               textAlign: TextAlign.left,
                               style: TextStyle(
                                 fontSize: 15,
@@ -248,7 +248,7 @@ class OrderConfirmState extends State<OrderConfirm> {
                             ),
                             Spacer(),
                             Text(
-                              '5,000원',
+                              '13,000원',
                               textAlign: TextAlign.left,
                               style: TextStyle(
                                 fontSize: 15,
@@ -287,7 +287,7 @@ class OrderConfirmState extends State<OrderConfirm> {
                             ),
                             Spacer(),
                             Text(
-                              '2023-05-26',
+                              '2023-06-12',
                               textAlign: TextAlign.left,
                               style: TextStyle(
                                 fontSize: 15,
@@ -415,7 +415,7 @@ class OrderConfirmState extends State<OrderConfirm> {
                       children: const [
                         Spacer(),
                         Text(
-                          '12',
+                          '0',
                           textAlign: TextAlign.left,
                           style: TextStyle(
                             fontSize: 48,
