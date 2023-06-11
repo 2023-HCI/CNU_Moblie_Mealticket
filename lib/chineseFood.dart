@@ -1,6 +1,10 @@
 import 'package:cnu_mobile_meal_ticket/payment.dart';
+import 'package:cnu_mobile_meal_ticket/shoppingBasket.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+import 'chinese_payment.dart';
+import 'chinese_shoppingBasket.dart';
 
 class ChineseFood extends StatefulWidget {
   @override
@@ -10,9 +14,9 @@ class ChineseFood extends StatefulWidget {
 }
 
 class ChineseFoodState extends State<ChineseFood> {
-  int lunchCounter = 0;
-  List<String> ramenName = ['일반라면', '떡라면', '부대라면', '김밥', '공기밥'];
-  List<int> ramenPrice = [2500, 3000, 4000, 2500, 500];
+  List<int> counters = [0, 0, 0, 0, 0, 0];
+  List<String> chineseFoodName = ['차돌온면', '매운차돌온면', '마라비빔면', '중국식물냉면', '마라차돌온면', '매운마라차돌온면'];
+  List<int> chinesePrice = [6500, 6500, 6000, 5500, 7000, 7000];
 
   void flutterDialog() {
     showDialog(
@@ -64,7 +68,7 @@ class ChineseFoodState extends State<ChineseFood> {
                 Navigator.pop(context);
               }),
           title: const Text(
-            "라면",
+            "중식",
             style: TextStyle(color: Colors.black),
             textAlign: TextAlign.center,
           ),
@@ -89,7 +93,7 @@ class ChineseFoodState extends State<ChineseFood> {
                 Container(
                   // 기준제목 container
                     width: 370,
-                    height: 1100, // 바디 페이지 길이
+                    height: 1900, // 바디 페이지 길이
                     decoration: BoxDecoration(
                       color: const Color(0xffffffff),
                       borderRadius: BorderRadius.circular(20),
@@ -114,7 +118,7 @@ class ChineseFoodState extends State<ChineseFood> {
                               width: 15,
                             ),
                             Text(
-                              '라면 & 간식',
+                              '중식',
                               textAlign: TextAlign.left,
                               style: TextStyle(
                                   fontSize: 16,
@@ -134,7 +138,7 @@ class ChineseFoodState extends State<ChineseFood> {
                               width: 15,
                             ),
                             Text(
-                              '4월 13일 목요일',
+                              '6월 12일 월요일',
                               textAlign: TextAlign.left,
                               style: TextStyle(
                                   fontSize: 14,
@@ -151,7 +155,7 @@ class ChineseFoodState extends State<ChineseFood> {
                               width: 15,
                             ),
                             Text(
-                              '예상 대기 인원: 15명',
+                              '예상 대기 인원: 0명',
                               textAlign: TextAlign.left,
                               style: TextStyle(
                                   fontSize: 14,
@@ -171,7 +175,7 @@ class ChineseFoodState extends State<ChineseFood> {
                             color: Colors.grey,
                           )
                         ]),
-                        for (int i = 0; i < 5; i += 1) // 메뉴 개수만큼 위젯 반복 *****
+                        for (int i = 0; i < chineseFoodName.length; i += 1) // 메뉴 개수만큼 위젯 반복 *****
                           Column(
                             children: [
                               const SizedBox(height: 10),
@@ -184,7 +188,7 @@ class ChineseFoodState extends State<ChineseFood> {
                                         height: 10,
                                       ),
                                       Text(
-                                        ramenName[i],
+                                        chineseFoodName[i],
                                         textAlign: TextAlign.left,
                                       )
                                     ],
@@ -194,7 +198,7 @@ class ChineseFoodState extends State<ChineseFood> {
                                   ),
                                   Column(
                                     children: [
-                                      Text(ramenPrice[i].toString()),
+                                      Text(chinesePrice[i].toString()),
                                       const SizedBox(
                                         height: 5,
                                       ),
@@ -203,7 +207,9 @@ class ChineseFoodState extends State<ChineseFood> {
                                           CupertinoButton(
                                               onPressed: () {
                                                 setState(() {
-                                                  lunchCounter--;
+                                                  if (counters[i] > 0) {
+                                                    counters[i]--;
+                                                  }
                                                 });
                                               },
                                               child: SizedBox(
@@ -212,11 +218,11 @@ class ChineseFoodState extends State<ChineseFood> {
                                                 child: Image.asset(
                                                     'assets/images/minus.png'),
                                               )),
-                                          Text('$lunchCounter'),
+                                          Text('${counters[i]}'),
                                           CupertinoButton(
                                               onPressed: () {
                                                 setState(() {
-                                                  lunchCounter++;
+                                                  counters[i]++;
                                                 });
                                               },
                                               child: SizedBox(
@@ -248,7 +254,7 @@ class ChineseFoodState extends State<ChineseFood> {
                                         ),
                                         onTap: () {
                                           Navigator.push(context,
-                                              MaterialPageRoute(builder: (context) =>  const Payment()));
+                                              MaterialPageRoute(builder: (context) =>  const ChinesePayment()));
                                         },
                                       )
                                     ],
@@ -266,6 +272,14 @@ class ChineseFoodState extends State<ChineseFood> {
                       ],
                     )),
               ])),
+        ),
+        floatingActionButton: FloatingActionButton(
+            onPressed: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => const ChineseShoppingBasket()));
+            },
+            backgroundColor: const Color(0xff034EA2),
+            child: const Icon(Icons.shopping_cart)
         ),
       ),
     );

@@ -151,7 +151,7 @@ class SnackState extends State<Snack> {
                               width: 15,
                             ),
                             Text(
-                              '예상 대기 인원: 15명',
+                              '예상 대기 인원: 3명',
                               textAlign: TextAlign.left,
                               style: TextStyle(
                                   fontSize: 14,

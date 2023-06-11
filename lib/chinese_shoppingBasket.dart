@@ -1,14 +1,16 @@
 import 'package:cnu_mobile_meal_ticket/payment.dart';
 import 'package:flutter/material.dart';
 
-class ShoppingBasket extends StatefulWidget {
-  @override
-  ShoppingBasketState createState() => ShoppingBasketState();
+import 'chinese_payment.dart';
 
-  const ShoppingBasket({Key? key}) : super(key: key);
+class ChineseShoppingBasket extends StatefulWidget {
+  @override
+  ChineseShoppingBasketState createState() => ChineseShoppingBasketState();
+
+  const ChineseShoppingBasket({Key? key}) : super(key: key);
 }
 
-class ShoppingBasketState extends State<ShoppingBasket> {
+class ChineseShoppingBasketState extends State<ChineseShoppingBasket> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -155,7 +157,7 @@ class ShoppingBasketState extends State<ShoppingBasket> {
                           left: 20,
                           bottom: 10,
                           child: Text(
-                            '2,500원',
+                            '6,500원',
                             style: TextStyle(
                               fontSize: 20,
                               color: Colors.black,
@@ -166,7 +168,7 @@ class ShoppingBasketState extends State<ShoppingBasket> {
                           left: 20,
                           top: 10,
                           child: Text(
-                            '라면-떡라면',
+                            '차돌 온면',
                             style: TextStyle(
                               fontSize: 16,
                               color: Color(0xFF034EA2),
@@ -250,22 +252,22 @@ class ShoppingBasketState extends State<ShoppingBasket> {
                             ),
                           ],
                         ),
-                        Positioned(
+                        const Positioned(
                           left: 20,
                           bottom: 10,
                           child: Text(
-                            '2,500원',
+                            '6,500원',
                             style: TextStyle(
                               fontSize: 20,
                               color: Colors.black,
                             ),
                           ),
                         ),
-                        Positioned(
+                        const Positioned(
                           left: 20,
                           top: 10,
                           child: Text(
-                            '라면-김밥',
+                            '매운 차돌 온면',
                             style: TextStyle(
                               fontSize: 16,
                               color: Color(0xFF034EA2),
@@ -350,7 +352,7 @@ class ShoppingBasketState extends State<ShoppingBasket> {
                         ),
                         const SizedBox(height: 50),
                         const Text(
-                          '5,000원',
+                          '13,000원',
                           style: TextStyle(
                             fontSize: 30,
                             color: Colors.black,
@@ -371,7 +373,7 @@ class ShoppingBasketState extends State<ShoppingBasket> {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => const Payment()));
+                                      builder: (context) => const ChinesePayment()));
                             },
                             child: Container(
                               margin: const EdgeInsets.symmetric(horizontal: 15),

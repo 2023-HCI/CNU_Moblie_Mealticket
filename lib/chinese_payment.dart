@@ -2,21 +2,22 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
 
+import 'chinese_orderConfirm.dart';
 import 'orderConfirm.dart';
 
-class Payment extends StatefulWidget {
+class ChinesePayment extends StatefulWidget {
   @override
-  PaymentState createState() => PaymentState();
-  const Payment({Key? key}) : super(key: key);
+  ChinesePaymentState createState() => ChinesePaymentState();
+  const ChinesePayment({Key? key}) : super(key: key);
 }
 
-class PaymentState extends State<Payment> {
+class ChinesePaymentState extends State<ChinesePayment> {
   final String studentNumber = '7080';
   final String studentName = '차차';
   // 현재 장바구니에 담긴 메뉴 리스트
   List<OrderItem> orderList = [
-    OrderItem(menu: '라면 - 떡라면', quantity: 1, price: 2500),
-    OrderItem(menu: '라면 - 김밥', quantity: 1, price: 2500),
+    OrderItem(menu: '중식 - 차돌온면', quantity: 1, price: 6500),
+    OrderItem(menu: '중식 - 매운차돌온면', quantity: 1, price: 6500),
     OrderItem(menu: '한식 - 김치찌개', quantity: 1, price: 5800),
     OrderItem(menu: '한식 - 제육덮밥', quantity: 1, price: 5500),
     OrderItem(menu: '일식 - 생우동', quantity: 1, price: 5300),
@@ -297,6 +298,7 @@ class PaymentState extends State<Payment> {
                                         Row(
                                           children: [
                                             Expanded(
+                                              flex: 2,
                                               child: Padding(
                                                 padding: const EdgeInsets.symmetric(horizontal: 8),
                                                 child: Align(
@@ -358,7 +360,7 @@ class PaymentState extends State<Payment> {
                               const Align(
                                 alignment: Alignment.centerRight,
                                 child: Text(
-                                  '결제금액: 5,000',
+                                  '결제금액: 13,000',
                                   //NumberFormat('#,###').format(orderList.fold<int>(0, (sum, item) => sum + item.price))
                                   style: TextStyle(
                                     fontSize: 25,
@@ -380,7 +382,7 @@ class PaymentState extends State<Payment> {
                       onPressed: () {
                         // 결제하기 버튼 클릭 함수
                         Navigator.push(context,
-                            MaterialPageRoute(builder: (context) =>  const OrderConfirm()));
+                            MaterialPageRoute(builder: (context) =>  const ChineseOrderConfirm()));
                       },
                       style: ElevatedButton.styleFrom(
                         fixedSize: const Size(350, 70), // 가로 길이와 세로 길이를 350과 70으로 고정
@@ -401,7 +403,6 @@ class PaymentState extends State<Payment> {
             ],
           ),
         ),
-
       ),
     );
   }
